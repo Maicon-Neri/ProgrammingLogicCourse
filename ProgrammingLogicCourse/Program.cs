@@ -6,30 +6,19 @@ namespace ProgrammingLogicCourse
     {
         static void Main(string[] args)
         {
-            // Tipos basicos de dados.
-            byte n1 = 126; // vai de 0 a 255
-            int n2 = 2147483647; // vai de -2.147.483.648 a 2.147.483.647
-            long n3 = 1000000000; //  bits
-            bool completo = false; // true ou false
-            char genero = 'F'; // um unico caractere
-            float n4 = 4.5f; // 32 bits
-            double n5 = 4.5; // 64 bits
-            string nome = "Maria"; // cadeia de caracteres
-            object obj1 = "Alex Brown"; // aceita qualquer tipo de dado
-            object obj2 = 4.5f; // aceita qualquer tipo de dado
-            var n6 = 4.5; // o compilador infere o tipo
+            // Saidas de dados
+            int idade = 32;
+            string nome = "João";
+            double saldo = 10.35784;
 
-            Console.WriteLine(n1);
-            Console.WriteLine(n2);
-            Console.WriteLine(n3);
-            Console.WriteLine(completo);
-            Console.WriteLine(genero);
-            Console.WriteLine(n4);
-            Console.WriteLine(n5);
-            Console.WriteLine(nome);
-            Console.WriteLine(obj1);
-            Console.WriteLine(obj2);
-            Console.WriteLine(n6);
+            // Placeholders
+            Console.WriteLine("{0} tem {1} anos e tem saldo igual a {2:F2} reais", nome, idade, saldo);
+
+            // Interpolação
+            Console.WriteLine($"{nome} tem {idade} anos e tem saldo igual a {saldo:F2} reais");
+
+            // Concatenação
+            Console.WriteLine(nome + " tem " + idade + " anos e tem saldo igual a " + saldo.ToString("F2") + " reais");
 
         }
     }
